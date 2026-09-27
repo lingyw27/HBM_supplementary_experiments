@@ -1,0 +1,23 @@
+{
+  "files": [
+    {
+      "source_label": "faults/int8_fault_ber003/source/worker.py",
+      "source_sha256": "a74a43e381932504067557160f981c32c6141a9d9faef1cfc1d5ad7488799700",
+      "packaged_sha256": "88e48f42c71dd761049777eed66da882f9ecf5dc87e86fc3b2595cdd894f1686",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels",
+        "replace server-specific root with the code folder"
+      ],
+      "packaged_path": "worker.py"
+    },
+    {
+      "source_label": "faults/int8_fault_ber003/source/config.json",
+      "source_sha256": "6db156927d62f49b20f104e952cffab039789ad328a1bb3ef941ea5940e85690",
+      "packaged_sha256": "c60a2164258b837fed77454c8c00bde6ded4b91dd3bed7e8c1dd9776a0baca7e",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels"
+      ],
+      "packaged_path": "config.json"
+    }
+  ]
+}

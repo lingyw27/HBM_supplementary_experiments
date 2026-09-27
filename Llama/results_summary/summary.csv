@@ -1,0 +1,6 @@
+model,mode,mathQA,MMLU,HumanEval
+Llama-3-8B-Instruct,FP16 clean,48.80%,48.80%,60.98%
+Llama-3-8B-Instruct,INT8 clean,48.40%,65.60%,65.60%
+Llama-3-8B-Instruct,INT8 BER=0.003,5.80%,26.46%,1.34%
+Llama-3-8B-Instruct,INT8 SpECC,46.49%,64.82%,56.83%
+Llama-3-8B-Instruct,INT8 SRLR,36.04%,59.34%,43.66%

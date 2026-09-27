@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "source_label": "local_working_copy/int8_srlr_worker_20260920_v6.py",
+      "source_sha256": "466e80032259e07553215a6da71fcd247ab528f4735138de008459a6899efe82",
+      "packaged_sha256": "29a4ae163862bf9221be5a3da3dc0bcb55f8c9349d24172f91af50167a669f17",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels"
+      ],
+      "packaged_path": "worker.py"
+    },
+    {
+      "source_label": "local_working_copy/int8_srlr_config_20260920_v6.json",
+      "source_sha256": "7482f7f1a4d02395801bdad1cc30f933e61c1a789b0b8167961d071454da5b9c",
+      "packaged_sha256": "d89df630605a22b490fe4e95d5c4c07c34c3334e14cc73f165c8c20192af0bd7",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels"
+      ],
+      "packaged_path": "config.json"
+    },
+    {
+      "source_label": "local_working_copy/int8_srlr_mathqa_replay_20260920_v1.py",
+      "source_sha256": "6ea731c22002489a3a00318df604ba85d56b4651dbb4f26f80d32f69506211db",
+      "packaged_sha256": "78df9986f27233e7fc3c82aad01e791333dc6d0282813e652709f088580c3b1c",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels",
+        "replace server-specific root with the code folder"
+      ],
+      "packaged_path": "mathqa_replay.py"
+    },
+    {
+      "source_label": "local_working_copy/int8_srlr_mathqa_replay_20260920_v1.json",
+      "source_sha256": "ba62c6f507faf2849b8a21f7d55f55bf80f3558d0aa71911db8f650b0a98b450",
+      "packaged_sha256": "56157c953a037b7bd05466b1d3417a5b90618d8d7aae034f9236e112b0a082c5",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels"
+      ],
+      "packaged_path": "mathqa_replay_config.json"
+    }
+  ]
+}

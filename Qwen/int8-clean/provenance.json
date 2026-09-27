@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "source_label": "baselines/int8_w8a16_g128_rtn/worker.py",
+      "source_sha256": "9f184def8e329a5e053859598fd8acc2e961a77812b0ce0b574173cc95c75fc0",
+      "packaged_sha256": "c3df144cc4a721d9c233be744247efa4a88ccea908d8fd71301583926db14307",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels"
+      ],
+      "packaged_path": "worker.py"
+    },
+    {
+      "source_label": "baselines/int8_w8a16_g128_rtn/config.json",
+      "source_sha256": "59fa3263d517edf7e95c26dbf6a7c9cf20f35890842c8023c8ad2fcc38eab5f2",
+      "packaged_sha256": "59fa3263d517edf7e95c26dbf6a7c9cf20f35890842c8023c8ad2fcc38eab5f2",
+      "transformations": [],
+      "packaged_path": "config.json"
+    }
+  ]
+}

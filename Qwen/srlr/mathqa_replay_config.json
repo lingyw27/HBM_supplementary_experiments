@@ -1,0 +1,82 @@
+{
+  "model_id": "Qwen/Qwen3-8B",
+  "model_revision": "main",
+  "local_model": ".runtime/hf/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "local_files_only": true,
+  "bits": 8,
+  "group_size": 128,
+  "quantization": "symmetric RTN W8A16; q in [-127,127]",
+  "compute_dtype": "bfloat16",
+  "fault_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "target_BER": 0.003,
+  "reference_total_active_bits": 55566139392,
+  "reference_target_fault_sites": 166698418,
+  "fault_direction": "1_to_0",
+  "inject_lm_head": false,
+  "inject_embeddings": false,
+  "protect_scales": false,
+  "protect_biases": false,
+  "protect_embeddings": false,
+  "mmlu_count": 1000,
+  "mmlu_shots": 5,
+  "humaneval_count": 164,
+  "mmlu_evaluator": "same strict-aligned choice log-probability evaluator",
+  "humaneval_evaluator": "same strict-aligned deterministic generation and sandbox evaluator",
+  "device_index": 1,
+  "device_selection_reason": "GPU0 occupied by existing reference worker; use idle GPU1 without interrupting it",
+  "context_limit": 12288,
+  "max_new_tokens": 768,
+  "cache_dequant": true,
+  "humaneval_timeout": 10,
+  "mathqa_max_new_tokens": 1024,
+  "mathqa_batch_size": 4,
+  "bf16_baseline": false,
+  "ci_target_pp": 0.5,
+  "parameter_error_rate": 0.003,
+  "weight_error_rate": 0.003,
+  "source_worker_sha256": "a74a43e381932504067557160f981c32c6141a9d9faef1cfc1d5ad7488799700",
+  "reference_clean_worker_sha256": "9f184def8e329a5e053859598fd8acc2e961a77812b0ce0b574173cc95c75fc0",
+  "clean_int8_result_name": "strict_aligned_clean_int8_20260918",
+  "clean_int8_baseline_pct": {
+    "mmlu": 72.2,
+    "humaneval": 83.53658536585365
+  },
+  "result_name": "results_int8_srlr_mathqa_replay_20260920_v1",
+  "method_order": [
+    "srlr"
+  ],
+  "seed_policy": "seed IDs 0-9 paired by ID with the completed reference INT8 run; coordinates are independently sampled from existing 1-bits in the SRLR-encoded payload, frozen, and replayed for both datasets",
+  "mask_policy": "uniform exact-size subset of encoded payload one-bits using the archived reference sampler; all ten masks frozen before inference; coordinate identity to unprotected masks is not claimed",
+  "srlr_method_label": "HBM-v6 SRLR: copy each INT8 MSB into its LSB before HBM storage; after 1-to-0 faults, restore both bits to 1 on mismatch",
+  "evaluation_datasets": [
+    "mathqa"
+  ],
+  "evaluation_order": [
+    "MathQA seeds 0-9 using the exact frozen v6 SRLR masks"
+  ],
+  "freeze_all_method_seed_masks_before_inference": true,
+  "mathqa_count": 1000,
+  "mathqa_shots": 5,
+  "mathqa_prompt_sha256": "8c6595ba4c5f1eedb5df4bfa989318be193eee5c932a824983f949658417ab25",
+  "clean_int8_mathqa_baseline": {
+    "correct": 849,
+    "total": 1000,
+    "accuracy_pct": 84.9
+  },
+  "source_v6_experiment": "strict_aligned_w8a16_srlr_ber003_mmlu_humaneval_20260920_v6",
+  "source_v6_worker_sha256": "466e80032259e07553215a6da71fcd247ab528f4735138de008459a6899efe82",
+  "source_v6_config_sha256": "7482f7f1a4d02395801bdad1cc30f933e61c1a789b0b8167961d071454da5b9c",
+  "model_snapshot_commit": "b968826d9c46dd6066d109eabc6255188de91218",
+  "derived_worker_sha256": "6ea731c22002489a3a00318df604ba85d56b4651dbb4f26f80d32f69506211db"
+}

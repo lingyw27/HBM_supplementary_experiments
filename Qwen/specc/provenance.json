@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "source_label": "local_working_copy/int8_specc_teacher_low4_worker_20260923_v2.py",
+      "source_sha256": "9e20d98d392b5425369d256b3ff6e1266434ca5a3c3dc52f2c2f8b32e65fdbbf",
+      "packaged_sha256": "ffce9aa543cdcabd62b59a6d059c6c58faffd749cbe4993f8ed0556546a92cc8",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels"
+      ],
+      "packaged_path": "worker.py"
+    },
+    {
+      "source_label": "local_working_copy/int8_specc_teacher_low4_config_20260923_v2.json",
+      "source_sha256": "9fbbeefaeb6218f4b9cc4370f789afef2cac88d711bd168ab225310830302d1c",
+      "packaged_sha256": "9fbbeefaeb6218f4b9cc4370f789afef2cac88d711bd168ab225310830302d1c",
+      "transformations": [],
+      "packaged_path": "config.json"
+    }
+  ]
+}

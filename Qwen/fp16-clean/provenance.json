@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "source_label": "baselines/fp16/worker.py",
+      "source_sha256": "096c9f555ec68a8edb0bb44c587a9a1230389b93ea469dd2ae7b92d41ec0963e",
+      "packaged_sha256": "8f3fbd12309b1551aa727912f4d5a8ddcd7d8074d6b302e54db88531a47f4f78",
+      "transformations": [
+        "neutralize shorthand in code identifiers and log labels"
+      ],
+      "packaged_path": "worker.py"
+    },
+    {
+      "source_label": "baselines/fp16/config.json",
+      "source_sha256": "19556a59a5820803cbf3a11c2e07915fe9f4b688478cb6b806fa1b627bdf5c1a",
+      "packaged_sha256": "19556a59a5820803cbf3a11c2e07915fe9f4b688478cb6b806fa1b627bdf5c1a",
+      "transformations": [],
+      "packaged_path": "config.json"
+    }
+  ]
+}

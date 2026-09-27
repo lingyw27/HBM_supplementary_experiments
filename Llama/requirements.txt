@@ -1,0 +1,7 @@
+torch
+transformers
+accelerate
+datasets
+tqdm
+jupyter
+optimum-quanto
