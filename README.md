@@ -1,29 +1,29 @@
-# HBM Supplementary Experiments
+# HBM 补充实验
 
-Supplementary code and selected benchmark results for Qwen3-8B and Llama-3-8B-Instruct experiments on memory fault protection.
+本仓库收录 Qwen3-8B 与 Llama-3-8B-Instruct 在存储器故障保护方面的补充实验代码及部分基准结果。
 
-## Contents
+## 目录结构
 
-- **`Qwen/`** — five experiment groups: `fp16-clean`, `int8-clean`, `int8-ber003`, `specc`, and `srlr`.
-- **`Llama/`** — experiment notebooks, scripts, notes, and result summaries. Experiment details are in `Llama/docs/EXPERIMENTS.md`.
+- **`Qwen/`**：五组实验，分别为 `fp16-clean`、`int8-clean`、`int8-ber003`、`specc` 和 `srlr`。
+- **`Llama/`**：实验笔记本、脚本、说明文档和结果摘要。实验说明见 `Llama/docs/EXPERIMENTS.md`。
 
-## Qwen INT8 configuration
+## Qwen INT8 配置
 
-The INT8 experiments use symmetric W8A16 RTN quantization (group size 128) with BF16 computation. Fault injection targets eligible weight bits in 252 non-`lm_head` linear layers; embeddings, `lm_head`, scales, and biases are excluded. The injected fault model is a one-to-zero bit flip at BER 0.003.
+INT8 实验采用对称 W8A16 RTN 量化，group size 为 128，计算精度为 BF16。故障注入范围为 252 个非 `lm_head` 线性层中符合条件的权重位；不包含 embedding、`lm_head`、scale 和 bias。注错模型为 BER=0.003 的 1→0 位翻转。
 
-The `specc` group adapts SPECC (Sparrow ECC) to INT8 weights: high-nibble values are Hamming(7,4)-encoded, while eligible raw low-nibble bits are subject to fault injection. Encoded high-nibble bits are excluded from injection; therefore, these results do not evaluate recovery from faults injected into those code bits.
+`specc` 实验将 SPECC（Sparrow ECC）适配到 INT8 权重：高半字节采用 Hamming(7,4) 编码，符合条件的低半字节原始位参与注错；编码后的高半字节位不注错。因此，该实验不评估编码位发生注错时的纠错恢复能力。
 
-## Selected benchmark accuracy
+## 部分基准准确率
 
-| Model | Experiment | MathQA | MMLU | HumanEval |
+| 模型 | 实验配置 | MathQA | MMLU | HumanEval |
 |---|---|---:|---:|---:|
-| Qwen3-8B | FP16 clean | 84.90% | 72.30% | 82.32% |
-| Qwen3-8B | INT8 clean | 84.90% | 72.20% | 83.54% |
-| Qwen3-8B | INT8 BER=0.003 | 24.41% | 43.99% | 37.81% |
+| Qwen3-8B | FP16 无注错 | 84.90% | 72.30% | 82.32% |
+| Qwen3-8B | INT8 无注错 | 84.90% | 72.20% | 83.54% |
+| Qwen3-8B | INT8，BER=0.003 | 24.41% | 43.99% | 37.81% |
 | Qwen3-8B | SPECC INT8 | 84.39% | 72.36% | 82.87% |
 | Qwen3-8B | SRLR INT8 | 80.40% | 71.13% | 78.17% |
-| Llama-3-8B-Instruct | FP16 clean | 48.80% | 48.80% | 60.98% |
-| Llama-3-8B-Instruct | INT8 clean | 48.40% | 65.60% | 65.60% |
-| Llama-3-8B-Instruct | INT8 BER=0.003 | 5.80% | 26.46% | 1.34% |
+| Llama-3-8B-Instruct | FP16 无注错 | 48.80% | 48.80% | 60.98% |
+| Llama-3-8B-Instruct | INT8 无注错 | 48.40% | 65.60% | 65.60% |
+| Llama-3-8B-Instruct | INT8，BER=0.003 | 5.80% | 26.46% | 1.34% |
 | Llama-3-8B-Instruct | SPECC INT8 | 46.49% | 64.82% | 56.83% |
 | Llama-3-8B-Instruct | SRLR INT8 | 36.04% | 59.34% | 43.66% |
